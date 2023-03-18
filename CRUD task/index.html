@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="styles.css">
+
+    <title>Articles CRUD</title>
+  </head>
+  <body>
+    
+    <h1>Articles</h1>
+    <button onclick="showForm()">Add Article</button>
+
+    <div id="articleForm" style="display:none;">
+      <h2 id="formTitle">Add Article</h2>
+
+
+
+      <form id="addArticleForm">
+        <input type="hidden" id="articleIndex">
+             <label for="title">Title:</label>
+
+
+        <input type="text" id="title" name="title" required><br><br>
+             <label for="author">Author:</label>
+        <input type="text" id="author" name="author" required><br><br>
+             <label for="content">Content:</label>
+        <textarea id="content" name="content" required></textarea><br><br>
+            <button type="submit">Submit</button>
+
+
+
+        <button type="button" onclick="hideForm()">Cancel</button>
+      </form>
+    </div>
+    <div id="articleList">
+      <h2>Article List</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Content</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody id="articleTableBody">
+        </tbody>
+      </table>
+    </div>
+    <script src="script.js"></script>
+    </body>
+    </html>
